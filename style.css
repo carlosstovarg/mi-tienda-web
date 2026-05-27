@@ -1,0 +1,86 @@
+/* ============================================
+   AGROTECH | style.css
+   Estilos globales separados del HTML
+   ============================================ */
+
+/* ---------- Variables de Diseño ---------- */
+:root {
+    --primary: #2BB673;
+    --primary-dark: #1e8151;
+    --bg-light: #ffffff;
+    --text-main: #0a1f16;
+}
+
+/* ---------- Base ---------- */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* ---------- Botón Principal ---------- */
+.btn-agro {
+    background: var(--primary);
+    color: white;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-agro:hover {
+    background: var(--primary-dark);
+    box-shadow: 0 10px 15px -3px rgba(43, 182, 115, 0.4);
+    transform: translateY(-2px);
+}
+
+/* ---------- Slider Hero ---------- */
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide {
+    min-width: 100%;
+}
+
+/* ---------- Carrito Lateral (Drawer) ---------- */
+#cart-drawer {
+    transform: translateX(100%);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#cart-drawer.open {
+    transform: translateX(0);
+}
+
+/* ---------- Cards de Productos ---------- */
+.product-card {
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- Scrollbar personalizado del carrito ---------- */
+#cart-items::-webkit-scrollbar {
+    width: 4px;
+}
+
+#cart-items::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+#cart-items::-webkit-scrollbar-thumb {
+    background: #2BB673;
+    border-radius: 10px;
+}
+
+/* ---------- Animación del contador del carrito ---------- */
+#cart-count {
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}

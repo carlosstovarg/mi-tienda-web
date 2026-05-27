@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrotech | Soluciones Químicas de Precisión</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50 text-slate-900 overflow-x-hidden">
+
+    <!-- Header / Navegación -->
+    <header class="fixed w-full z-50 bg-white/80 backdrop-blur-lg border-b border-slate-100 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="bg-emerald-600 p-1.5 rounded-lg shadow-lg shadow-emerald-200">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                </div>
+                <span class="text-2xl font-black tracking-tighter text-slate-900">AGROTECH</span>
+            </div>
+            <nav class="hidden lg:flex space-x-10 text-[11px] font-extrabold uppercase tracking-[0.2em] text-slate-500">
+                <a href="#hero" class="hover:text-emerald-600 transition-colors">Inicio</a>
+                <a href="#tienda" class="hover:text-emerald-600 transition-colors">Productos</a>
+                <a href="#tecnologia" class="hover:text-emerald-600 transition-colors">Tecnología</a>
+                <a href="#contacto" class="hover:text-emerald-600 transition-colors">Contacto</a>
+            </nav>
+            <div class="flex items-center space-x-5">
+                <button onclick="toggleCart()" class="relative group p-2 transition-transform active:scale-90">
+                    <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    <span id="cart-count" class="absolute top-0 right-0 bg-emerald-600 text-white text-[10px] font-bold h-5 w-5 flex items-center justify-center rounded-full border-2 border-white shadow-sm transition-all">0</span>
+                </button>
+                <button class="hidden md:block btn-agro px-6 py-2.5 rounded-xl text-xs font-bold shadow-md">PORTAL MAYOREO</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative pt-32 pb-20 px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div class="relative z-10">
+                <div class="inline-block px-4 py-1.5 bg-emerald-100 text-emerald-700 rounded-full text-[10px] font-bold uppercase tracking-widest mb-6">Grado Técnico Industrial</div>
+                <h1 class="text-5xl lg:text-8xl font-black leading-[0.9] text-slate-900 mb-8">Fórmulas de <br><span class="text-emerald-600">Alta Eficiencia.</span></h1>
+                <p class="text-slate-500 text-lg mb-10 max-w-lg leading-relaxed font-medium">Suministramos la tecnología química que potencia la agricultura de exportación. Directo de planta a su campo.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#tienda" class="btn-agro px-10 py-5 rounded-2xl font-bold text-sm">EXPLORAR CATÁLOGO</a>
+                    <button class="bg-slate-900 text-white px-10 py-5 rounded-2xl font-bold text-sm hover:bg-slate-800 transition-all">SOPORTE TÉCNICO</button>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="slider-container shadow-[0_32px_64px_-12px_rgba(0,0,0,0.15)] bg-white p-2">
+                    <div class="slides" id="hero-slider">
+                        <div class="slide relative h-[550px]">
+                            <img src="https://lh3.googleusercontent.com/d/1SVqvW1bH8QYCgjsG5JIqwc3Ji2DL1dCm" class="w-full h-full object-cover rounded-2xl" alt="Línea Nitro-X">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-10 text-white rounded-2xl">
+                                <h3 class="text-3xl font-black mb-2">Línea Nitro-X Forte</h3>
+                                <p class="text-sm text-slate-300 font-medium max-w-xs">Tecnología de liberación controlada para nutrición prolongada.</p>
+                            </div>
+                        </div>
+                        <div class="slide relative h-[550px]">
+                            <img src="https://lh3.googleusercontent.com/d/18-wwEN2iWYJ2DvXVhFU5oBKe0HM0HVaj" class="w-full h-full object-cover rounded-2xl" alt="Phos-Precision">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-10 text-white rounded-2xl">
+                                <h3 class="text-3xl font-black mb-2">Phos-Precision</h3>
+                                <p class="text-sm text-slate-300 font-medium max-w-xs">Estimulación radicular intensiva para cultivos de alto valor.</p>
+                            </div>
+                        </div>
+                        <div class="slide relative h-[550px]">
+                            <img src="https://lh3.googleusercontent.com/d/1TQk8gOrN9yxTmYgjGC7F-LL4DtP7QZe" class="w-full h-full object-cover rounded-2xl" alt="K-Ultra Liquid">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-10 text-white rounded-2xl">
+                                <h3 class="text-3xl font-black mb-2">K-Ultra Liquid</h3>
+                                <p class="text-sm text-slate-300 font-medium max-w-xs">Potasio quelatado para llenado de fruto de máxima calidad.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-4">
+                        <button onclick="moveHero(-1)" class="w-12 h-12 bg-white/10 hover:bg-white/30 backdrop-blur-md rounded-full text-white flex items-center justify-center transition-all">❮</button>
+                    </div>
+                    <div class="absolute inset-y-0 right-0 flex items-center pr-4">
+                        <button onclick="moveHero(1)" class="w-12 h-12 bg-white/10 hover:bg-white/30 backdrop-blur-md rounded-full text-white flex items-center justify-center transition-all">❯</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filtros y Tienda -->
+    <section id="tienda" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+                <div>
+                    <h2 class="text-4xl font-black text-slate-900 mb-3 tracking-tight">Catálogo Industrial</h2>
+                    <p class="text-slate-400 font-bold uppercase text-[10px] tracking-[0.3em]">Disponibilidad Inmediata en Planta</p>
+                </div>
+                <div class="flex bg-slate-100 p-1.5 rounded-2xl space-x-1">
+                    <button onclick="filterProducts('todos')" class="filter-btn px-6 py-3 rounded-xl text-xs font-bold bg-white text-emerald-600 shadow-sm transition-all duration-300">Todos</button>
+                    <button onclick="filterProducts('fertilizante')" class="filter-btn px-6 py-3 rounded-xl text-xs font-bold text-slate-500 hover:text-slate-900 transition-all duration-300">Fertilizantes</button>
+                    <button onclick="filterProducts('bio')" class="filter-btn px-6 py-3 rounded-xl text-xs font-bold text-slate-500 hover:text-slate-900 transition-all duration-300">Bio-estimulantes</button>
+                </div>
+            </div>
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Generado por JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Tecnología de Planta -->
+    <section id="tecnologia" class="py-32 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-emerald-600/5 -skew-x-12 translate-x-1/2"></div>
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
+            <div class="relative group">
+                <div class="absolute -inset-4 bg-emerald-600/20 rounded-[40px] blur-2xl group-hover:bg-emerald-600/30 transition-all"></div>
+                <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&q=80&w=1200" class="relative rounded-[32px] h-[500px] w-full object-cover shadow-2xl z-10" alt="Planta Agrotech">
+                <div class="absolute -bottom-8 -right-8 bg-emerald-600 p-8 rounded-3xl z-20 shadow-xl">
+                    <p class="text-4xl font-black mb-1">99.9%</p>
+                    <p class="text-[10px] font-bold uppercase tracking-widest opacity-80">Pureza Certificada</p>
+                </div>
+            </div>
+            <div class="relative z-10">
+                <h2 class="text-5xl font-black mb-8 leading-tight">Síntesis Química <br><span class="text-emerald-400">de Vanguardia.</span></h2>
+                <p class="text-slate-400 text-lg mb-10 leading-relaxed">Ubicados en Zapopan, Jalisco, operamos bajo estrictos protocolos internacionales. Nuestra planta cuenta con reactores de acero inoxidable de alta presión y sistemas de filtrado por ósmosis inversa para asegurar que cada gota sea máxima eficiencia para su cultivo.</p>
+                <div class="grid grid-cols-2 gap-6 mb-10">
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10 hover:border-emerald-500/50 transition-colors">
+                        <p class="text-emerald-400 font-bold mb-2 text-xs uppercase tracking-widest">Capacidad</p>
+                        <p class="text-xl font-bold">50k L / Día</p>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10 hover:border-emerald-500/50 transition-colors">
+                        <p class="text-emerald-400 font-bold mb-2 text-xs uppercase tracking-widest">Envíos</p>
+                        <p class="text-xl font-bold">Logística Propia</p>
+                    </div>
+                </div>
+                <button class="inline-flex items-center space-x-3 text-emerald-400 font-black group">
+                    <span class="text-sm uppercase tracking-widest">Ver tour de planta</span>
+                    <svg class="group-hover:translate-x-2 transition-transform" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="py-24 bg-white">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-black text-slate-900 mb-3 tracking-tight">Contacto Comercial</h2>
+                <p class="text-slate-400 text-sm font-medium">Nuestro equipo técnico le responde en menos de 2 horas hábiles.</p>
+            </div>
+            <form id="contact-form" class="space-y-6 bg-slate-50 p-10 rounded-3xl border border-slate-100">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-[10px] font-black uppercase tracking-widest text-slate-500 mb-2">Nombre Completo</label>
+                        <input type="text" id="form-name" placeholder="Ing. Juan Pérez" class="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 outline-none text-sm font-medium transition-all">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-black uppercase tracking-widest text-slate-500 mb-2">Correo Electrónico</label>
+                        <input type="email" id="form-email" placeholder="juan@empresa.com" class="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 outline-none text-sm font-medium transition-all">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-[10px] font-black uppercase tracking-widest text-slate-500 mb-2">Mensaje / Solicitud</label>
+                    <textarea id="form-message" rows="4" placeholder="Necesito cotización para..." class="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 outline-none text-sm font-medium transition-all resize-none"></textarea>
+                </div>
+                <button type="button" onclick="submitContact()" class="w-full btn-agro py-5 rounded-2xl font-black text-sm tracking-widest">ENVIAR SOLICITUD</button>
+                <p id="form-status" class="text-center text-sm font-bold text-emerald-600 hidden"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Carrito Lateral -->
+    <div id="cart-overlay" onclick="toggleCart()" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-[60] hidden opacity-0 transition-opacity"></div>
+    <div id="cart-drawer" class="fixed right-0 top-0 h-full w-full max-w-[450px] bg-white z-[70] shadow-2xl flex flex-col">
+        <div class="p-8 border-b flex justify-between items-center bg-slate-50">
+            <div>
+                <h3 class="text-2xl font-black text-slate-900">Tu Pedido</h3>
+                <p class="text-[10px] font-black text-emerald-600 uppercase tracking-widest mt-1">Configuración Industrial</p>
+            </div>
+            <button onclick="toggleCart()" class="text-slate-400 hover:text-slate-900 transition-colors">
+                <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+        <div id="cart-items" class="flex-1 overflow-y-auto p-8 space-y-6">
+            <div class="flex flex-col items-center justify-center py-20 text-slate-400">
+                <svg width="64" height="64" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" class="mb-4 opacity-20"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                <p class="font-bold">No hay productos seleccionados.</p>
+            </div>
+        </div>
+        <div class="p-8 border-t bg-slate-50 space-y-6">
+            <div class="flex justify-between items-end">
+                <span class="text-slate-500 font-bold text-xs uppercase tracking-widest">Total Estimado</span>
+                <span id="cart-total" class="text-3xl font-black text-slate-900 leading-none">$0.00 MXN</span>
+            </div>
+            <p class="text-[10px] text-slate-400 font-bold leading-relaxed italic">Precios de lista. Descuentos por volumen se aplican tras validación comercial.</p>
+            <button onclick="checkout()" class="w-full btn-agro py-5 rounded-2xl font-black text-sm tracking-widest">INICIAR COTIZACIÓN FORMAL</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-100 py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-16">
+            <div>
+                <div class="flex items-center space-x-2 mb-8">
+                    <div class="bg-emerald-600 p-1 rounded-md shadow-lg shadow-emerald-200">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                    </div>
+                    <span class="text-xl font-black tracking-tighter">AGROTECH</span>
+                </div>
+                <p class="text-slate-400 text-sm leading-relaxed font-medium">Liderando la nutrición vegetal con biotecnología de última generación desde Jalisco para el mundo.</p>
+            </div>
+            <div class="space-y-4">
+                <h4 class="font-black text-sm uppercase tracking-widest text-slate-900">Ubicación</h4>
+                <p class="text-slate-400 text-sm">Parque Industrial Zapopan Norte,<br>Zapopan, Jalisco, México CP 45130.</p>
+            </div>
+            <div class="space-y-4">
+                <h4 class="font-black text-sm uppercase tracking-widest text-slate-900">Contacto Directo</h4>
+                <p class="text-emerald-600 font-black text-lg">01 800 AGRO TECH</p>
+                <p class="text-slate-400 text-sm">ventas@agrotech-precision.com</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-slate-50 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-[10px] text-slate-400 font-black uppercase tracking-widest">© 2024 AGROTECH S.A. DE C.V. - TODOS LOS DERECHOS RESERVADOS.</p>
+            <div class="flex space-x-6 text-[10px] font-black uppercase tracking-widest text-slate-400">
+                <a href="#" class="hover:text-emerald-600">Privacidad</a>
+                <a href="#" class="hover:text-emerald-600">Términos</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts (Firebase primero, luego app) -->
+    <script type="module" src="firebase.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
